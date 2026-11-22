@@ -1,15 +1,20 @@
-:root { --bg: #F3EFE6; --text: #1C1A16; --muted: #5E584A; --accent: #7D5F17; --card: #FBF9F4; }
-@media (prefers-color-scheme: dark) { :root { --bg: #1E1C18; --text: #F5F2EA; --muted: #B5AE9A; --accent: #E7CC88; --card: #2A2722; } }
+/* Privacy and Support pages: the same design system as the home page (the app's welcome screen). */
+:root { --canvas:#F3EFE6; --surface:#FBF9F4; --yellow:#E7CC88; --ink:#2E2A20; --accent:#7D5F17; --todayrow:#F2E5C3;
+  --text:#1C1A16; --text2:#5E584A; --sep:#E4DED0; --shadow: 0 10px 24px rgba(60,45,10,.12), 0 2px 6px rgba(60,45,10,.06); }
+@media (prefers-color-scheme: dark) { :root { --canvas:#1E1C18; --surface:#2A2722; --yellow:#E2C47A; --ink:#1E1C18; --accent:#E7CC88;
+  --todayrow:#3D3626; --text:#F5F2EA; --text2:#B5AE9A; --sep:#3A362E; --shadow: 0 10px 24px rgba(0,0,0,.35); } }
 * { box-sizing: border-box; }
-body { margin: 0; background: var(--bg); color: var(--text); font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
-main { max-width: 680px; margin: 0 auto; padding: 48px 16px 64px; }
-header { display: flex; align-items: center; gap: 12px; margin-bottom: 32px; }
-header img { width: 48px; height: 48px; border-radius: 11px; }
-header a { color: var(--text); text-decoration: none; font-weight: 600; font-size: 20px; }
-h1 { font-size: 32px; line-height: 1.2; margin: 0 0 8px; }
-h2 { font-size: 20px; margin: 32px 0 8px; }
+body { margin: 0; background: var(--canvas); color: var(--text); font: 17px/1.6 Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased; }
+main { max-width: 720px; margin: 0 auto; padding: 32px 16px 72px; }
+header { display: flex; align-items: center; gap: 10px; margin-bottom: 48px; }
+header img { width: 36px; height: 36px; border-radius: 9px; }
+header a { color: var(--text); text-decoration: none; font-weight: 700; font-size: 18px; letter-spacing: -.01em; }
+h1 { font-size: clamp(40px, 7vw, 60px); line-height: 1.02; letter-spacing: -.04em; font-weight: 800; margin: 0 0 12px; }
+h2 { font-size: 22px; letter-spacing: -.02em; margin: 40px 0 8px; }
 p, li { color: var(--text); }
-.muted { color: var(--muted); font-size: 15px; }
+.muted { color: var(--text2); font-size: 15px; }
 a { color: var(--accent); }
-.card { background: var(--card); border-radius: 12px; padding: 16px 20px; margin: 16px 0; }
-nav { margin-top: 48px; display: flex; gap: 20px; font-size: 15px; }
+.card { background: var(--surface); border-radius: 22px; padding: 18px 22px; margin: 20px 0; box-shadow: var(--shadow); }
+nav { margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--sep); display: flex; gap: 20px; font-size: 15px; }
+nav a { color: var(--text2); }
